@@ -1,6 +1,17 @@
-from flask import Flask
+from flask import Flask, g, render_template
+import sqlite3
 
+DATABASE = 'database.db'
+
+#initialise app
 app = Flask(__name__)
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db =g.database 
+
+
 
 @app.route("/")
 def hello_world():
