@@ -27,8 +27,14 @@ def query_db(query, args=(), one=False):
 
 
 @app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+def home():
+    #homepage- just the Title, Author, Genre, Subjects, Audience, Copies
+    sql = """SELECT Books.Title, Books.Author, Books.Genre, Books.Subjects, Books.Audience, Books.Copies 
+    FROM Books;"""
+    results = query_db(sql)
+    return render_template ("home.HTML" ,results=results)
+
+
 if __name__ == "__main__":
     
     app.run(debug=True)
