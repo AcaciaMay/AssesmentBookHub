@@ -32,7 +32,7 @@ def home():
     sql = """SELECT Books.Title, Books.Author, Books.Genre, Books.Subjects, Books.Audience, Books.Copies 
     FROM Books;"""
     results = query_db(sql)
-    return render_template ("home.HTML" ,results=results)
+    return render_template ("home.html" ,results=results)
 
 
 if __name__ == "__main__":
