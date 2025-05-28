@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- just one book! -->
+<!-- two column grid -->
+<div class="two-column">
+    <!-- image on left -->
+    <img src="{{ book[6] }}" alt="{{ book[2] }}">
+<!-- info panel -->
+ <div class="info">
+    <h1> Description {{ book[5] }} </h1>
+    <h1> Copies: {{ bike[8] }}  </h1>
+    <h1> Availability </h1>
+    <h1> {{ book[9] }} </h1>
+ </div>
+</div>
+{% endblock %}
