@@ -1,16 +1,19 @@
 {% extends "layout.html" %}
 {% block body %}
-<!-- just one book! -->
-<!-- two column grid -->
+<!-- Just one book! -->
+<!-- Two column grid -->
 <div class="two-column">
-    <!-- image on left -->
-    <img src="{{ book[1] }}" alt="{{ book[2] }}">
-<!-- info panel -->
- <div class="info">
-    <h1> Description {{ book[5] }} </h1>
-    <h1> Copies: {{ bike[8] }}  </h1>
-    <h1> Availability </h1>
-    <h1> {{ book[9] }} </h1>
- </div>
+    <!-- Placeholder image on left -->
+    <img src="/static/default_cover.jpg" alt="{{ book[1] }}" width="200" height="300">
+
+    <!-- Info panel -->
+    <div class="info">
+        <h1>{{ book[1] }}</h1> <!-- Title -->
+        <p><strong>Author:</strong> {{ book[2] }}</p>
+        <p><strong>Genre:</strong> {{ book[3] }}</p>
+        <p><strong>Subjects:</strong> {{ book[4] }}</p>
+        <p><strong>Audience:</strong> {{ book[5] }}</p>
+        <p><strong>Copies Available:</strong> {{ book[6] }}</p>
+    </div>
 </div>
 {% endblock %}
