@@ -24,12 +24,15 @@ def query_db(query, args=(), one=False):
 
 @app.route("/")
 def home():
-    sql = """
-    SELECT BookID, Title, Author, Genre, Subjects, Audience, Copies, "Image URL"
-    FROM Books;
+    query = """
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+            *
+        FROM Books
+        ORDER BY Title ASC;
     """
-    results = query_db(sql)
-    return render_template("home.html", results=results)
+    books = query_db(query)  # or however you're fetching from the database
+    return render_template("home.html", books=books)
 
 @app.route("/book/<int:book_id>")
 def book(book_id):
