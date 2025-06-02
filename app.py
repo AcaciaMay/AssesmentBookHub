@@ -28,11 +28,12 @@ def query_db(query, args=(), one=False):
 
 @app.route("/")
 def home():
-    #homepage- just the Title, Author, Genre, Subjects, Audience, Copies
-    sql = """SELECT Books.Title, Books.Author, Books.Genre, Books.Subjects, Books.Audience, Books.Copies 
-FROM Books;"""
+    sql = """
+    SELECT Books.BookID, Books.Title, Books.Author, Books.Genre, Books.Subjects, Books.Audience, Books.Copies 
+    FROM Books;
+    """
     results = query_db(sql)
-    return render_template ("home.html" ,results=results)
+    return render_template("home.html", results=results)
 
 
 
