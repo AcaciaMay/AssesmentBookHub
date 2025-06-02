@@ -1,10 +1,6 @@
 -- database: ./database.db
-SELECT 
-    ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-    Title,
-    BookID
-FROM Books
-ORDER BY Title ASC;
+SELECT * FROM Books
+ORDER BY `Title` ASC;
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers) VALUES( "0-307-26543-9","The Road", "Cormac McCarthy", "Dystopian Fiction", "A post-apocalyptic novel that follows a father and son on a harrowing journey across a desolate, ash-filled landscape after an unspecified cataclysm has destroyed civilization", "Tragedy, Science Fiction, Post Apocalyptic world.", "11+", 5, "Available","Pan Macmillan");
 
