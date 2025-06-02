@@ -2,21 +2,19 @@ from flask import Flask, g, render_template
 import sqlite3
 
 DATABASE = 'database.db'
-
-#initialise app
 app = Flask(__name__)
 
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-        db = g.database = sqlite3.connect(DATABASE)
+        db = g._database = sqlite3.connect(DATABASE)
     return db
 
 @app.teardown_appcontext
 def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
-        db.close() 
+        db.close()
 
 def query_db(query, args=(), one=False):
     cur = get_db().execute(query, args)
@@ -24,12 +22,10 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-
-
 @app.route("/")
 def home():
     sql = """
-    SELECT Books.BookID, Books.Title, Books.Author, Books.Genre, Books.Subjects, Books.Audience, Books.Copies 
+    SELECT BookID, Title, Author, Genre, Subjects, Audience, Copies, "Image URL"
     FROM Books;
     """
     results = query_db(sql)
@@ -38,7 +34,7 @@ def home():
 @app.route("/book/<int:book_id>")
 def book(book_id):
     sql = """
-    SELECT BookID, Title, Author, Genre, Subjects, Audience, Copies
+    SELECT BookID, Title, Author, Genre, Subjects, Audience, Copies, "Image URL", Description, Availability
     FROM Books
     WHERE BookID = ?;
     """
@@ -47,7 +43,5 @@ def book(book_id):
         return "Book not found", 404
     return render_template("book.html", book=result)
 
-
 if __name__ == "__main__":
-    
     app.run(debug=True)
