@@ -2,14 +2,14 @@
 {% block body %}
 <div class="three-column">
     {% for book in results %}
-    <a href="{{ url_for('book', book_id=book[1]) }}">
+    <a href="{{ url_for('book_by_isbn', isbn=book[1]) }}">
         <div class="w3-card-4">
             <h2>{{ book[3] }} by {{ book[4] }}</h2>
-            <img src="{{ book[6] }}" alt="{{ book[3] }}" width="200" height="250">
+            <img src="{{ book[2] }}" alt="{{ book[3] }}" width="200" height="250">
             <p><strong>Genre:</strong> {{ book[5] }}</p>
-            <p><strong>Audience:</strong> {{ book[8] }}</p>
-            <p><strong>Copies:</strong> {{ book[9] }}</p>
-            <p><strong>Book #: </strong>{{ book[0] }}</p> <!-- this is the row number (1–20) -->
+            <p><strong>Subjects:</strong> {{ book[6] }}</p>
+            <p><strong>Audience:</strong> {{ book[7] }}</p>
+            <p><strong>Copies:</strong> {{ book[8] }}</p>
         </div>
     </a>
     {% endfor %}
