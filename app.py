@@ -31,7 +31,7 @@ def home():
     query = """
         SELECT 
             ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-            BookID, ISBN, "Image URL", Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers
+            ISBN, "Image URL", Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers
         FROM Books
         ORDER BY Title ASC;
     """
