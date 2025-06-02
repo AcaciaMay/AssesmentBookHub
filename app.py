@@ -25,18 +25,16 @@ def query_db(query, args=(), one=False):
 @app.route("/")
 def home():
     query = """
-        SELECT * FROM (
-            SELECT 
-                ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-                Title,
-                BookID
-            FROM Books
-        ) AS NumberedBooks
-        ORDER BY RowNum ASC;
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+            ISBN, "Image URL", Title, Author, Genre, Subjects, Audience, Copies
+        FROM Books
+        ORDER BY Title ASC;
     """
     results = query_db(query)
-    return render_template("home.html", results=results)
-
+    # ✅ SORT the results in Python to enforce ascending row number order
+    results_sorted = sorted(results, key=lambda row: row[0])  # row[0] = RowNum
+    return render_template("home.html", results=results_sorted)
 
 @app.route("/book/isbn/<isbn>")
 def book_by_isbn(isbn):
