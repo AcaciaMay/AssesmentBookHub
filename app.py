@@ -35,6 +35,17 @@ def home():
     results = query_db(sql)
     return render_template("home.html", results=results)
 
+@app.route("/book/<int:book_id>")
+def book(book_id):
+    sql = """
+    SELECT BookID, Title, Author, Genre, Subjects, Audience, Copies
+    FROM Books
+    WHERE BookID = ?;
+    """
+    result = query_db(sql, [book_id], one=True)
+    if result is None:
+        return "Book not found", 404
+    return render_template("book.html", book=result)
 
 
 if __name__ == "__main__":
