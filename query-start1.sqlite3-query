@@ -1,7 +1,14 @@
 -- database: ./database.db
 
-SELECT * FROM Books
-ORDER BY `Title` ASC;
+INSERT INTO Books_new (
+    BookID, ISBN, "Image URL", Title, Author, Genre, Description,
+    Subjects, Audience, Copies, Availability, Publishers
+)
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY Title ASC),
+    ISBN, "Image URL", Title, Author, Genre, Description,
+    Subjects, Audience, Copies, Availability, Publishers
+FROM Books;
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers) VALUES( "0-307-26543-9","The Road", "Cormac McCarthy", "Dystopian Fiction", "A post-apocalyptic novel that follows a father and son on a harrowing journey across a desolate, ash-filled landscape after an unspecified cataclysm has destroyed civilization", "Tragedy, Science Fiction, Post Apocalyptic world.", "11+", 5, "Available","Pan Macmillan");
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers) VALUES("978-0451524935", "1984", "George Orwell", "Dystopian Fiction", "A chilling depiction of perpetual war, omnipresent government surveillance, and public manipulation.", "Totalitarianism, Surveillance, Rebellion", "16+", 4, "Available", "Penguin Random House");
@@ -41,5 +48,3 @@ INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, C
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers) VALUES("978-0060885595", "Collapse", "Jared Diamond", "History", "Examines how past societies collapsed and what we can learn from them.", "Ecology, Civilization, History", "16+", 1, "Non Available", "Penguin Random House");
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers) VALUES("978-0061120084", "Fahrenheit 451", "Ray Bradbury", "Dystopian Fiction", "A fireman in a future society burns books, until he begins to question everything.", "Censorship, Freedom, Knowledge", "15+", 4, "Available", "HarperCollins");
-
-INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Publishers) VALUES("978-0143127741", "The Road", "Cormac McCarthy", "Dystopian Fiction", "A father and son journey through a post-apocalyptic world.", "Survival, Family, Despair", "16+", 5, "Non Available", "Penguin Random House");
