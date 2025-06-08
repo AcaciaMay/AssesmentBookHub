@@ -4,6 +4,23 @@ import sqlite3
 DATABASE = 'database.db'
 app = Flask(__name__)
 
+books = [
+"The Handmaid's Tale",
+"1984",
+"Brave New World",
+"The Food Lab"
+]
+
+app.route('/')
+def home():
+    return render_template('home.html')
+
+app.route('/search') 
+def search():
+    query = request.args.get('q', '').lower()
+    results = [book for book in books if query in book.lower()]
+    return render_template('search_results.html', results=results, query=query)
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
