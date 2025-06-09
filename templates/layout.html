@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="'en">
+<html lang="en">
 <head>
-
-    <meta charsets="UTF-8">
-    <meta name="'viewport" content="'width=device-width, inital-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    <title>BookHub</title>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <title>BookHub</title>
 </head>
 <body class="w3-container">
+
     <!--Shared Header Bar-->
     <header class="w3-container w3-padding-32">
-      <h1>BookHub</h1>
+        <h1>BookHub</h1>
     </header>
+
     <!--Shared Navbar-->
     <nav class="w3-bar w3-blue-grey">
         <a href="/" class="w3-bar-item w3-button">Home</a>
+
+        <!-- Search bar in nav -->
+        <form method="GET" action="{{ url_for('search') }}" class="w3-bar-item">
+            <input class="w3-input w3-bar-item" type="text" name="q" placeholder="Search for a book..." required>
+            <button class="w3-button w3-teal" type="submit">Search</button>
+        </form>
     </nav>
+
     {% block body %}
     {% endblock %}
-
-    <form method="GET" action="{{ url_for('search') }}"> 
-      <input type=" text" name="q" placeholder="Search for a book..." required>
-      <button type="submit">Search</button> 
-    </form>
 
 </body>
 </html>
