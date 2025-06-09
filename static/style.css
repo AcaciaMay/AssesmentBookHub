@@ -1,19 +1,69 @@
-input[type="text"] {
-    padding: 8px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+body {
+    font-family: 'Georgia', serif;
+    background-color: #e0e0e0;
+    color: #333;
+    margin: 0;
+    padding: 0;
   }
   
-  button {
-    padding: 8px 12px;
-    background-color: #607d8b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  /* Header */
+  header h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Righteous', cursive;
   }
   
-  button:hover {
-    background-color: #455a64;
+  /* Intro Text Boxes */
+  .intro-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+  }
+  
+  .intro-text {
+    width: 48%;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* New Editions Section */
+  .editions-container {
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .editions-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Book Card Styling */
+  .card-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
   }
