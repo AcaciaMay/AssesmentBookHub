@@ -1,0 +1,10 @@
+form {
+  margin: 20px 0;
+}
+input[type="text"] {
+    padding: 8px;
+    width: 250px;
+}
+button {
+    padding: 8px 12px;
+}

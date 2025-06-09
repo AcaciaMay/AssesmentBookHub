@@ -5,17 +5,17 @@ DATABASE = 'database.db'
 app = Flask(__name__)
 
 books = [
-"The Handmaid's Tale",
-"1984",
-"Brave New World",
-"The Food Lab"
+    "The Handmaid's Tale",
+    "1984",
+    "Brave New World",
+    "The Food Lab"
 ]
 
-app.route('/')
+@app.route('/')
 def home():
     return render_template('home.html')
 
-app.route('/search') 
+@app.route('/search', methods=['GET'])
 def search():
     query = request.args.get('q', '').lower()
     results = [book for book in books if query in book.lower()]
