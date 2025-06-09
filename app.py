@@ -4,23 +4,7 @@ import sqlite3
 DATABASE = 'database.db'
 app = Flask(__name__)
 
-books = [
-    "The Handmaid's Tale",
-    "1984",
-    "Brave New World",
-    "The Food Lab"
-]
-
-@app.route('/')
-def home():
-    return render_template('home.html')
-
-@app.route('/search', methods=['GET'])
-def search():
-    query = request.args.get('q', '').lower()
-    results = [book for book in books if query in book.lower()]
-    return render_template('search_results.html', results=results, query=query)
-
+# --- DB Connection Functions ---
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -39,6 +23,7 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
+# --- Home Route ---
 @app.route("/")
 def home():
     query = """
@@ -58,6 +43,32 @@ def home():
     """
     books = query_db(query)
     return render_template("home.html", books=books)
+
+# --- Search Route ---
+@app.route("/search", methods=["GET"])
+def search():
+    query = request.args.get("q", "").lower()
+    sql = """
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+            Title,
+            Author,
+            Genre,
+            Subjects,
+            Audience,
+            Copies,
+            "Image URL",
+            Description,
+            Availability
+        FROM Books
+        WHERE LOWER(Title) LIKE ? OR LOWER(Author) LIKE ?
+        ORDER BY Title ASC;
+    """
+    like_query = f"%{query}%"
+    results = query_db(sql, (like_query, like_query))
+    return render_template("search_results.html", results=results, query=query)
+
+# --- Book Details by ISBN Route ---
 @app.route("/book/isbn/<isbn>")
 def book_by_isbn(isbn):
     sql = """
@@ -70,5 +81,6 @@ def book_by_isbn(isbn):
         return "Book not found", 404
     return render_template("book.html", book=result)
 
+# --- Run the App ---
 if __name__ == "__main__":
     app.run(debug=True)
