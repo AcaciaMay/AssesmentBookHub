@@ -7,7 +7,7 @@
     {% for book in results %}
     <div class="w3-card-4">
         <h2>{{ book[1] }} by {{ book[2] }}</h2>
-        <img src="{{ book[7] }}" alt="{{ book[1] }}" width="200" height="250">
+        <img src="{{ url_for('static', filename=book[7]) }}" alt="{{ book[1] }}" width="200" height="250">
         <p><strong>Genre:</strong> {{ book[3] }}</p>
         <p><strong>Audience:</strong> {{ book[5] }}</p>
         <p><strong>Copies:</strong> {{ book[6] }}</p>
