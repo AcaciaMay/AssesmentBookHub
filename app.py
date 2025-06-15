@@ -82,7 +82,7 @@ def book_detail(isbn):
         "Image URL",
         Description,
         Availability,
-        Publisher,
+        Publishers,  -- <-- this is the correct column name
         ISBN
     FROM Books
     WHERE ISBN = ?
