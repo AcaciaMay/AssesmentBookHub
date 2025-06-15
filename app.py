@@ -49,21 +49,22 @@ def home():
 def search():
     query = request.args.get("q", "").lower()
     sql = """
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-            Title,
-            Author,
-            Genre,
-            Subjects,
-            Audience,
-            Copies,
-            "Image URL",
-            Description,
-            Availability
-        FROM Books
-        WHERE LOWER(Title) LIKE ? OR LOWER(Author) LIKE ?
-        ORDER BY Title ASC;
-    """
+    SELECT 
+        ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+        Title,
+        Author,
+        Genre,
+        Subjects,
+        Audience,
+        Copies,
+        "Image URL",
+        Description,
+        Availability,
+        ISBN
+    FROM Books
+    WHERE LOWER(Title) LIKE ? OR LOWER(Author) LIKE ?
+    ORDER BY Title ASC;
+"""
     like_query = f"%{query}%"
     results = query_db(sql, (like_query, like_query))
     return render_template("search_results.html", results=results, query=query)
