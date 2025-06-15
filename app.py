@@ -1,4 +1,4 @@
-from flask import Flask, g, render_template, request
+from flask import Flask, g, render_template, request, abort
 import sqlite3
 
 DATABASE = 'database.db'
@@ -67,6 +67,29 @@ def search():
     like_query = f"%{query}%"
     results = query_db(sql, (like_query, like_query))
     return render_template("search_results.html", results=results, query=query)
+
+@app.route("/book/<isbn>")
+def book_detail(isbn):
+    sql = """
+    SELECT 
+        Title,
+        Author,
+        Genre,
+        Subjects,
+        Audience,
+        Copies,
+        "Image URL",
+        Description,
+        Availability,
+        Publisher,
+        ISBN
+    FROM Books
+    WHERE ISBN = ?
+    """
+    book = query_db(sql, (isbn,), one=True)
+    if not book:
+        abort(404)
+    return render_template("book_detail.html", book=book)
 
 # --- Book Details by ISBN Route ---
 @app.route("/book/isbn/<isbn>")
