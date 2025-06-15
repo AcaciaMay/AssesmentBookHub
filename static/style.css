@@ -67,3 +67,28 @@ body {
     border-radius: 4px;
     margin-bottom: 10px;
   }
+  .all-books-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .book-card {
+    display: flex;
+    width: 30%;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-image {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .book-info {
+    flex: 1;
+  }
