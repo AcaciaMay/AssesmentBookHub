@@ -4,7 +4,6 @@ import sqlite3
 DATABASE = 'database.db'
 app = Flask(__name__)
 
-# --- DB Connection Functions ---
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -23,7 +22,6 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-# --- Home Route ---
 @app.route("/")
 def home():
     query = """
@@ -44,7 +42,6 @@ def home():
     books = query_db(query)
     return render_template("home.html", books=books)
 
-# --- Search Route ---
 @app.route("/search", methods=["GET"])
 def search():
     query = request.args.get("q", "").lower()
@@ -82,7 +79,7 @@ def book_detail(isbn):
         "Image URL",
         Description,
         Availability,
-        Publishers,  -- <-- this is the correct column name
+        Publishers, 
         ISBN
     FROM Books
     WHERE ISBN = ?
@@ -92,7 +89,6 @@ def book_detail(isbn):
         abort(404)
     return render_template("book_detail.html", book=book)
 
-# --- Book Details by ISBN Route ---
 @app.route("/book/isbn/<isbn>")
 def book_by_isbn(isbn):
     sql = """
@@ -105,6 +101,5 @@ def book_by_isbn(isbn):
         return "Book not found", 404
     return render_template("book.html", book=result)
 
-# --- Run the App ---
 if __name__ == "__main__":
     app.run(debug=True)
