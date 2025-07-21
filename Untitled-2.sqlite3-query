@@ -1,0 +1,7 @@
+-- database: ./database.db
+
+INSERT INTO Books (`Image URL`) SELECT images/collapse.jpeg WHERE Title='Collapse';
+INSERT INTO Books (`Image URL`) SELECT images/Thechocolatecookbook.png WHERE Title='The Chocolate Cookbook';
+INSERT INTO Books (`Image URL`) SELECT images/TheChroniclesofNarnia WHERE Title='The Chronicles of Narnia';
+INSERT INTO Books (`Image URL`) SELECT images/athome.jpeg WHERE Title='Michel Roux at Home';
+
