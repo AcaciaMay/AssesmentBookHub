@@ -16,18 +16,21 @@
         <h1>BookHub</h1>
     </header>
 
-    <nav class="w3-bar w3-blue-grey">
-        <a href="/" class="w3-bar-item w3-button">Home</a>
-      <form method="GET" action="/filter">
-  <select name="genre">
-    <option value="">Select Genre</option>
-    {% for genre in genres %}
-      <option value="{{ genre['Genre'] }}">{{ genre['Genre'] }}</option>
-    {% endfor %}
-  </select>
-  <button type="submit">Filter</button>
-</form>
-    </nav>
+   <nav class="w3-bar w3-blue-grey">
+  <a href="/" class="w3-bar-item w3-button">Home</a>
+  <form method="GET" action="/" style="display: inline-block; margin-left: 10px;">
+    <select name="genre" class="w3-select w3-bar-item" style="width: auto; display: inline-block;">
+      <option value="">Select Genre</option>
+      {% for genre in genres %}
+        <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
+          {{ genre['Genre'] }}
+        </option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="w3-button w3-bar-item w3-teal" style="display: inline-block;">Filter</button>
+  </form>
+</nav>
+
 
     {% block body %}
     {% endblock %}
