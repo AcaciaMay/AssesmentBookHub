@@ -51,25 +51,45 @@ INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, C
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("9780590080330", "The Chocolate Cookbook", "Marcy Mager and Michael Mager", "Cooking", "This first edition paperback book features illustrated pages filled with delectable chocolate recipes, perfect for food enthusiasts of all ages. Learn how to create mouth-watering chocolate desserts.", "Cooking, Learning, Food", "All Ages", 1, "Non Available", "Russel Community Library", "Scholastic");
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("9781399610650", "Michel Roux at Home", "Michel Roux jr.", "Cooking", "Discover the joy of cooking simple and delicious French meals at home with Michel Roux, the celebrated chef and author of numerous award-winning cookbooks.", "Cooking, French, Food", "14+", 3, "Available", "Devonport Library", "Orion Publishing");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0544003415","The Tale of Despereaux","Kate DiCamillo","Adventure Fiction","A brave mouse goes on a quest to rescue a human princess and save his kingdom.","Courage, Friendship, Adventure","8+",4,"Available","Kawakawa Library","Little Brown Books For Young Readers");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143126560","Alexander Hamilton","Ron Chernow","History","A detailed biography of American founding father Alexander Hamilton.","Biography, US History, Politics","16+",5,"Available","Central City Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0062464316","The Jungle Book","Rudyard Kipling","Adventure Fiction","Stories of Mowgli, a boy raised by wolves in the Indian jungle.","Animals, Jungle, Coming of Age","10+",4,"Available","Epsom Library","HarperCollins");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0593101512","Sapiens: A Graphic History Vol. 1","Yuval Noah Harari","History","A graphic adaptation of Harari’s exploration of human history.","Anthropology, Evolution, Civilization","16+",3,"Available","Avondale Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0553386790","Ender's Game","Orson Scott Card","Fantasy","A young prodigy battles alien invaders in a futuristic training academy.","Science Fiction, Strategy, Coming of Age","14+",6,"Available","Birkenhead Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0679720201","One Hundred Years of Solitude","Gabriel García Márquez","Dystopian Fiction","A multi‑generational tale blending magical realism and political history.","Magical Realism, Family Saga, Politics","16+",4,"Available","Blockhouse Bay Library","HarperCollins");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0307455166","The Road Home","Salman Rushdie","Dystopian Fiction","A post‑apocalyptic memoir‑fiction hybrid about displacement and identity.","Survival, Migration, Memory","16+",2,"Non Available","Devonport Library","Pan Macmillan");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0140449266","The Republic","Plato","History","Philosophical dialogue on justice, politics, and the ideal state.","Philosophy, Politics, Society","16+",3,"Available","Botany Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0393356182","In the Garden of Beasts","Erik Larson","History","The true story of an American ambassador’s family in Nazi Germany.","WWII, Biography, Politics","16+",4,"Available","East Coast Bays Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143127551","The Alchemist","Paulo Coelho","Adventure Fiction","A shepherd boy travels in search of treasure and learns universal lessons about following dreams.","Adventure, Philosophy, Self‑Discovery","14+",5,"Available","Kaitāia Library","HarperCollins");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0802124150","The Poisonwood Bible","Barbara Kingsolver","History","A missionary family's life upheaval in the Belgian Congo.","Family, Politics, Colonialism","16+",3,"Available","Kohukohu Community Library","HarperCollins");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0452284234","The Secret Garden","Frances Hodgson Burnett","Gardening","An orphaned girl discovers a hidden, neglected garden and brings it back to life.","Friendship, Healing, Nature","8+",6,"Available","Mangōnui Community Library","Scholastic");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0307277671","The Night Circus","Erin Morgenstern","Fantasy","Two illusionists compete within a magical traveling circus in a timeless love story.","Magic, Romance, Mystery","14+",4,"Available","Rāwene Community Library","Scholastic");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143127552","Circe","Madeline Miller","Fantasy","The myth of Circe, retold from her perspective as a powerful sorceress.","Mythology, Feminism, Magic","15+",5,"Available","Russel Community Library","Bloomsbury");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0062316098","The Plantagenets: Pillars of Power","Dan Jones","History","A fresh and engaging look at the Plantagenet rulers of England.","British History, Royalty","15+",2,"Available","Whangārei Central Library","HarperCollins");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143039433","The Naked Chef","Jamie Oliver","Cooking","A beginner’s guide to simple, fresh cooking from the famous chef.","Recipes, Techniques, Healthy Cooking","All Ages",7,"Available","Onerahi Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143112318","The Splendid and the Vile","Erik Larson","History","Churchill’s leadership during the Blitz, blending biography and WWII history.","WWII, Biography, Britain","16+",4,"Available","Mobile Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0393356183","The Flavor Thesaurus","Niki Segnit","Cooking","A comprehensive guide to flavor combinations and cooking creativity.","Flavor Pairing, Ingredients, Inspiration","All Ages",3,"Available","Albany Village Library","Workman Publishing");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0553573404","Endurance: Shackleton's Incredible Voyage","Alfred Lansing","History","The true story of Ernest Shackleton’s Antarctic expedition and leadership under crisis.","Exploration, Survival, Leadership","16+",4,"Available","Blockhouse Bay Library","Penguin Random House");
+
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143128950","A Gentleman in Moscow","Amor Towles","History","A Russian count is placed under house arrest in a luxury hotel during Soviet era.","Russia, Politics, History","16+",5,"Available","Kamo Library","Penguin Random House");
 
 
