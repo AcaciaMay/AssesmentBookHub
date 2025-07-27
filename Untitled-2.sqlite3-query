@@ -1,6 +1,15 @@
 -- database: ./database.db
 
-UPDATE Books SET (`Image URL`) = 'static/images/collapse.jpeg' WHERE Title = 'Collapse';
-
+UPDATE Books SET ImageURL = 'static/images/theroad.jpeg' WHERE Title = 'The Road';
+UPDATE Books SET ImageURL = 'static/images/1984.png' WHERE Title = '1984';
+UPDATE Books SET ImageURL = 'static/images/bravenewworld.jpeg' WHERE Title = 'Brave New World';
+UPDATE Books SET ImageURL = 'static/images/the handmaid''s tale.png' WHERE Title = 'The Handmaid''s Tale';
+UPDATE Books SET ImageURL = 'static/images/The Hobbit.jpeg' WHERE Title = 'The Hobbit';
+UPDATE Books SET ImageURL = 'static/images/thesorcerestone.jpeg' WHERE Title = 'The Sorcerer''s Stone';
+UPDATE Books SET ImageURL = 'static/images/saltfatacidheat.jpg' WHERE Title = 'Salt, Fat, Acid, Heat';
+UPDATE Books SET ImageURL = 'static/images/thefoodlab.jpeg' WHERE Title = 'The Food Lab';
+UPDATE Books SET ImageURL = 'static/images/theflavorbible.jpeg' WHERE Title = 'The Flavor Bible';
+UPDATE Books SET ImageURL = 'static/images/thegardenprimer.jpeg' WHERE Title = 'The Garden Primer';
+UPDATE Books SET ImageURL = 'static/images/theflowergardenersbible.jpeg' WHERE Title = 'The Flower Gardener''s Bible';
 
  
