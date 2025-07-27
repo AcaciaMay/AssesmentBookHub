@@ -13,7 +13,7 @@
 <div class="editions-container">
   <h2>New Editions</h2>
   <div class="card-grid">
-    {% for book in books[:3] %}
+    {% for book in books[:2] %}
     <div class="card">
       <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
       <p><strong>{{ book[1] }}</strong></p>
@@ -27,7 +27,7 @@
   <div class="all-books-grid">
     {% for book in books %}
     <div class="book-card">
-      <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}" class="book-image">
+      
       <div class="book-info">
         <h3>{{ book[1] }}</h3>
         <p><strong>Author:</strong> {{ book[2] }}</p>
