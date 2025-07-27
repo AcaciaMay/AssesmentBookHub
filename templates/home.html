@@ -13,8 +13,8 @@
   <select name="genre">
     <option value="">Select Genre</option>
     {% for genre in genres %}
-      <option value="{{ genre['name'] }}">{{ genre['name'] }}</option>
-    {% endfor %}
+  <option value="{{ genre['Genre'] }}">{{ genre['Genre'] }}</option>
+{% endfor %}
   </select>
   <button type="submit">Filter</button>
 </form>

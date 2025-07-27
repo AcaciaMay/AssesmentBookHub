@@ -26,7 +26,7 @@ def query_db(query, args=(), one=False):
 @app.route("/")
 def home():
     # Get all genres for dropdown
-    genres = query_db("SELECT name FROM Genre ORDER BY name ASC;")
+    genres = query_db("SELECT Genre FROM Genre ORDER BY Genre ASC;")
 
     genre_name = request.args.get("genre")
 
