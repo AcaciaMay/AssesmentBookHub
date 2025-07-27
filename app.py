@@ -8,6 +8,7 @@ def get_db():
     db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
+        db.row_factory = sqlite3.Row  # For named column access
     return db
 
 @app.teardown_appcontext
@@ -24,23 +25,48 @@ def query_db(query, args=(), one=False):
 
 @app.route("/")
 def home():
-    query = """
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-            Title,
-            Author,
-            Genre,
-            Subjects,
-            Audience,
-            Copies,
-            "Image URL",
-            Description,
-            Availability
-        FROM Books
-        ORDER BY Title ASC;
-    """
-    books = query_db(query)
-    return render_template("home.html", books=books)
+    # Get all genres for dropdown
+    genres = query_db("SELECT name FROM Genre ORDER BY name ASC;")
+
+    genre_name = request.args.get("genre")
+
+    if genre_name:
+        sql = """
+            SELECT 
+                ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+                Title,
+                Author,
+                Genre,
+                Subjects,
+                Audience,
+                Copies,
+                "Image URL",
+                Description,
+                Availability
+            FROM Books
+            WHERE Genre = ?
+            ORDER BY Title ASC;
+        """
+        books = query_db(sql, (genre_name,))
+    else:
+        sql = """
+            SELECT 
+                ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+                Title,
+                Author,
+                Genre,
+                Subjects,
+                Audience,
+                Copies,
+                "Image URL",
+                Description,
+                Availability
+            FROM Books
+            ORDER BY Title ASC;
+        """
+        books = query_db(sql)
+
+    return render_template("home.html", books=books, genres=genres)
 
 @app.route("/search", methods=["GET"])
 def search():
