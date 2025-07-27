@@ -18,22 +18,15 @@
 
     <nav class="w3-bar w3-blue-grey">
         <a href="/" class="w3-bar-item w3-button">Home</a>
-<form method="GET" action="/filter">
+      <form method="GET" action="/filter">
   <select name="genre">
-    <option value="">Genre</option>
-    <option value="Dystopian Fiction">Dystopian Fiction</option>
-    <option value="Gardening">Gardening</option>
-    <option value="Cooking">Cooking</option>
-    <option value="History">History</option>
-    <option value="Fantasy">Fantasy</option>
-    <option value="Adventure Fiction">Adventure Fiction</option>
+    <option value="">Select Genre</option>
+    {% for genre in genres %}
+      <option value="{{ genre['Genre'] }}">{{ genre['Genre'] }}</option>
+    {% endfor %}
   </select>
   <button type="submit">Filter</button>
 </form>
-        <form method="GET" action="{{ url_for('search') }}" class="w3-bar-item">
-            <input class="w3-input w3-bar-item" type="text" name="q" placeholder="Search for a book..." required>
-            <button class="w3-button w3-teal" type="submit">Search</button>
-        </form>
     </nav>
 
     {% block body %}
