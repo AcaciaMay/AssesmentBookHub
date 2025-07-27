@@ -25,12 +25,16 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 
+@app.context_processor
+def inject_genres():
+    genres = query_db("SELECT Genre FROM Genre ORDER BY Genre ASC;")
+    return dict(genres=genres)
+
+
 @app.route("/")
 def home():
-    selected_genre = request.args.get("genre")
-    genres = query_db("SELECT Genre FROM Genre ORDER BY Genre ASC;")
-
-    if selected_genre:
+    genre = request.args.get("genre", "")
+    if genre:
         sql = """
             SELECT 
                 ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
@@ -47,7 +51,7 @@ def home():
             WHERE Genre = ?
             ORDER BY Title ASC;
         """
-        books = query_db(sql, (selected_genre,))
+        books = query_db(sql, (genre,))
     else:
         sql = """
             SELECT 
@@ -66,7 +70,7 @@ def home():
         """
         books = query_db(sql)
 
-    return render_template("home.html", books=books, genres=genres, selected_genre=selected_genre)
+    return render_template("home.html", books=books, selected_genre=genre)
 
 
 @app.route("/search", methods=["GET"])
