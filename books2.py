@@ -26,7 +26,8 @@ title_to_image = {
     "Harry Potter and the Sorcerer's Stone": "thesorcerersstone.jpeg",
     "The Splendid and the Vile": "thesplendidandthevile.jpg",
     "The Vegetable Gardener's Bible": "thevegetablegardenersbible.jpeg",
-    "The Wild Robot": "thewildrobot.jpeg"
+    "The Wild Robot": "thewildrobot.jpeg",
+    "The Tale of Despereaux": "ttod.jpeg"
 }
 
 # Connect to the correct database file
