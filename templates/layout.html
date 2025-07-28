@@ -29,6 +29,14 @@
     </select>
     <button type="submit" class="w3-button w3-bar-item w3-teal" style="display: inline-block;">Filter</button>
   </form>
+<form method="GET" action="{{ url_for('search') }}" class="w3-bar-item">
+            <input class="w3-input w3-bar-item" type="text" name="q" placeholder="Search for a book..." required>
+            <button class="w3-button w3-teal" type="submit">Search</button>
+        </form>
+    </nav>
+    <nav class="w3-bar w3-light-grey">
+      <a href ="{{ url_for('about')}}" class="w3-bar-item w3-button">book_detail</a>
+    </nav>
 </nav>
 
 
