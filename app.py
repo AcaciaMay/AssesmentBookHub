@@ -30,25 +30,6 @@ def inject_genres():
     genres = query_db("SELECT Genre FROM Genre ORDER BY Genre ASC;")
     return dict(genres=genres)
 
-@app.route("/")
-def home():
-    query = """
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-            Title,
-            Author,
-            Genre,
-            Subjects,
-            Audience,
-            Copies,
-            "Image URL",
-            Description,
-            Availability
-        FROM Books
-        ORDER BY Title ASC;
-    """
-    books = query_db(query)
-    return render_template("home.html", books=books)
 
 @app.route("/")
 def home():
