@@ -82,6 +82,6 @@ INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, C
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0553573404","Endurance: Shackleton's Incredible Voyage","Alfred Lansing","History","The true story of Ernest Shackleton’s Antarctic expedition and leadership under crisis.","Exploration, Survival, Leadership","16+",4,"Available","Blockhouse Bay Library","Penguin Random House");
 
-INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143128950","A Gentleman in Moscow","Amor Towles","History","A Russian count is placed under house arrest in a luxury hotel during Soviet era.","Russia, Politics, History","16+",5,"Available","Kamo Library","Penguin Random House");
+INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0555128950","A Gentleman in Moscow","Amor Towles","History","A Russian count is placed under house arrest in a luxury hotel during Soviet era.","Russia, Politics, History","16+",5,"Available","Kamo Library","Penguin Random House");
 
 
