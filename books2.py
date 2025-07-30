@@ -37,10 +37,13 @@ title_to_image = {
     "The Republic": "plato.jpeg", 
     "In the Garden of Beasts": "gardenofbeasts.jpeg", 
     "The Alchemist": "thealchemist.jpeg",
-    "The Poisonwood Bible": "", 
-    "The Secret Garden": "",
-    "The Night Circus": "",
-    "Circe": "",
+    "The Poisonwood Bible": "poison.jpeg", 
+    "The Secret Garden": "secretgarden.jpeg",
+    "The Night Circus": "circus.jpg",
+    "Circe": "circe.jpeg",
+    "The Plantagenets: Pillars of Power": "",
+    "The Naked Chef": "",
+    "": "",
 }
 
 conn = sqlite3.connect("database.db")

@@ -78,8 +78,6 @@ INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, C
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143039433","The Naked Chef","Jamie Oliver","Cooking","A beginner’s guide to simple, fresh cooking from the famous chef.","Recipes, Techniques, Healthy Cooking","All Ages",7,"Available","Onerahi Library","Penguin Random House");
 
-INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0143112318","The Splendid and the Vile","Erik Larson","History","Churchill’s leadership during the Blitz, blending biography and WWII history.","WWII, Biography, Britain","16+",4,"Available","Mobile Library","Penguin Random House");
-
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0393356183","The Flavor Thesaurus","Niki Segnit","Cooking","A comprehensive guide to flavor combinations and cooking creativity.","Flavor Pairing, Ingredients, Inspiration","All Ages",3,"Available","Albany Village Library","Workman Publishing");
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0553573404","Endurance: Shackleton's Incredible Voyage","Alfred Lansing","History","The true story of Ernest Shackleton’s Antarctic expedition and leadership under crisis.","Exploration, Survival, Leadership","16+",4,"Available","Blockhouse Bay Library","Penguin Random House");
