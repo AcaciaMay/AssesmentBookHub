@@ -34,9 +34,15 @@ title_to_image = {
     "Ender's Game": "endergame.jpeg",
     "One Hundred Years of Solitude": "onehundred.jpeg",
     "The Road Home": "theroadhome.jpg",
+    "The Republic": "plato.jpeg", 
+    "In the Garden of Beasts": "gardenofbeasts.jpeg", 
+    "The Alchemist": "thealchemist.jpeg",
+    "The Poisonwood Bible": "", 
+    "The Secret Garden": "",
+    "The Night Circus": "",
+    "Circe": "",
 }
 
-# Connect to the correct database file
 conn = sqlite3.connect("database.db")
 cursor = conn.cursor()
 
