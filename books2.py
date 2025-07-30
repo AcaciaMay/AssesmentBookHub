@@ -29,7 +29,11 @@ title_to_image = {
     "The Wild Robot": "thewildrobot.jpeg",
     "The Tale of Despereaux": "ttod.jpeg",
     "Alexander Hamilton": "hamilton.jpg",
-    "The Jungle Book": "junglebook.jpeg"
+    "The Jungle Book": "junglebook.jpeg",
+    "Sapiens: A Graphic History Vol. 1": "sapiens2.jpeg",
+    "Ender's Game": "endergame.jpeg",
+    "One Hundred Years of Solitude": "onehundred.jpeg",
+    "The Road Home": "theroadhome.jpg",
 }
 
 # Connect to the correct database file
