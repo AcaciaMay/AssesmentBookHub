@@ -43,7 +43,9 @@ title_to_image = {
     "Circe": "circe.jpeg",
     "The Plantagenets: Pillars of Power": "",
     "The Naked Chef": "",
-    "": "",
+    "The Flavor Thesaurus": "",
+    "Endurance: Shackleton's Incredible Voyage": "",
+    "A Gentleman in Moscow": ""
 }
 
 conn = sqlite3.connect("database.db")
