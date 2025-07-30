@@ -27,7 +27,9 @@ title_to_image = {
     "The Splendid and the Vile": "thesplendidandthevile.jpg",
     "The Vegetable Gardener's Bible": "thevegetablegardenersbible.jpeg",
     "The Wild Robot": "thewildrobot.jpeg",
-    "The Tale of Despereaux": "ttod.jpeg"
+    "The Tale of Despereaux": "ttod.jpeg",
+    "Alexander Hamilton": "hamilton.jpg",
+    "The Jungle Book": "junglebook.jpeg"
 }
 
 # Connect to the correct database file

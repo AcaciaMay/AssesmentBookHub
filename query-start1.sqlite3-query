@@ -58,7 +58,7 @@ INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, C
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0679720201","One Hundred Years of Solitude","Gabriel García Márquez","Dystopian Fiction","A multi‑generational tale blending magical realism and political history.","Magical Realism, Family Saga, Politics","16+",4,"Available","Blockhouse Bay Library","HarperCollins");
 
-INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0307455166","The Road Home","Salman Rushdie","Dystopian Fiction","A post‑apocalyptic memoir‑fiction hybrid about displacement and identity.","Survival, Migration, Memory","16+",2,"Non Available","Devonport Library","Pan Macmillan");
+INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0307455166","The Road Home","Rose Tremaine","Adeventure Fiction","Lev is on his way from Eastern Europe to Britain, seeking work. Behind him loom the figures of his dead wife, his beloved young daughter and his outrageous friend Rudi","Survival, Migration, Memory","16+",2,"Non Available","Devonport Library","Pan Macmillan");
 
 INSERT INTO Books(ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES("978-0140449266","The Republic","Plato","History","Philosophical dialogue on justice, politics, and the ideal state.","Philosophy, Politics, Society","16+",3,"Available","Botany Library","Penguin Random House");
 
