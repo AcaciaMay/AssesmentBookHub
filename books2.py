@@ -1,6 +1,6 @@
 import sqlite3
 
-# Map of Title → Image Filename (relative to static/images/)
+
 title_to_image = {
     "1984": "1984.png",
     "At Home": "athome.jpeg",
@@ -54,7 +54,7 @@ cursor = conn.cursor()
 updated = 0
 not_found = []
 
-# Loop through each title and update the corresponding row in the Books table
+
 for title, filename in title_to_image.items():
     image_path = f"images/{filename}"
     cursor.execute("""
@@ -67,11 +67,11 @@ for title, filename in title_to_image.items():
     else:
         updated += cursor.rowcount
 
-# Commit and close
+
 conn.commit()
 conn.close()
 
-# Output results
+
 print(f"✅ Updated {updated} row(s) in 'Books' table.")
 if not_found:
     print("\n⚠️ These titles were not found in the database:")
