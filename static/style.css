@@ -14,7 +14,7 @@ body {
     font-family: 'Alice', serif;
   }
   
-  /* Intro Text Boxes */
+   /* Intro Text Boxes */
   .intro-container {
     display: flex;
     justify-content: space-between;
@@ -23,10 +23,11 @@ body {
     margin: 20px;
     border-radius: 12px;
   }
-  
   .intro-text {
+    display: flex;
+    justify-content: space-between;
     width: 48%;
-    background-color: #ddd;
+    background-color: #c5dae6;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -34,7 +35,7 @@ body {
   
   /* New Editions Section */
   .editions-container {
-    background-color: #f0f0f0;
+    background-color: #c5dae6;
     margin: 20px;
     padding: 20px;
     border-radius: 12px;
