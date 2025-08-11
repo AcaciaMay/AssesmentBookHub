@@ -13,16 +13,7 @@ body {
     padding: 20px;
     font-family: 'Alice', serif;
   }
-  
-   /* Intro Text Boxes */
-  .intro-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ccc;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 12px;
-  }
+
   .intro-text {
     display: flex;
     justify-content: space-between;
