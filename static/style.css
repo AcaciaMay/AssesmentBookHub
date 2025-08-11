@@ -17,10 +17,9 @@ body {
     display: right;
     background-color: #c5dae6;
     width: 25%;
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 20px;
     border-radius: 20px;
-    gap: 65px;
   }
   
   /* New Editions Section */
