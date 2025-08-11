@@ -6,7 +6,7 @@ body {
     padding: 0;
   }
   
-  /* Header */
+
   header h1 {
     font-size: 48px;
     margin: 0;
@@ -22,7 +22,7 @@ body {
     border-radius: 20px;
   }
   
-  /* New Editions Section */
+ 
   .editions-container {
     display: left;
     background-color: #c5dae6;
