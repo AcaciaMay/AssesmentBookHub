@@ -37,21 +37,23 @@ body {
   .editions-container {
     display: left;
     background-color: #c5dae6;
+    Height: 4%;
+    Width: 45%;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
   }
   
   .editions-container h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 5px;
   }
   
   
   .card-grid {
     display: flex;
     justify-content: space-around;
-    gap: 1px;
+    gap: 15px;
   }
   
   .card {
@@ -59,7 +61,7 @@ body {
     border-radius: 8px;
     padding: 10px;
     text-align: center;
-    width: 30%;
+    width: 35%;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   }
   
