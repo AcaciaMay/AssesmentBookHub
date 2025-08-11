@@ -16,11 +16,12 @@ body {
 
   .intro-text {
     display: flex;
+    gap: 100px;
     justify-content: space-between;
-    width: 48%;
+    width: 50%;
     background-color: #c5dae6;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   }
   
