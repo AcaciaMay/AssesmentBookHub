@@ -13,12 +13,15 @@ body {
     padding: 20px;
     font-family: 'Alice', serif;
   }
-
+.intro-text {
+    display: right;
+    gap: 65px;
+    margin-bottom: 20px;
+  }
   .intro-text {
-    display: flex;
-    gap: 100px;
+    display: right;
     justify-content: space-between;
-    width: 50%;
+    width: 25%;
     background-color: #c5dae6;
     padding: 20px;
     border-radius: 20px;
