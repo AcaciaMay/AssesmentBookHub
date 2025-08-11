@@ -13,11 +13,6 @@ body {
     padding: 20px;
     font-family: 'Alice', serif;
   }
-.intro-text {
-    display: right;
-    gap: 65px;
-    margin-bottom: 20px;
-  }
   .intro-text {
     display: right;
     justify-content: space-between;
@@ -25,7 +20,8 @@ body {
     background-color: #c5dae6;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    gap: 65px;
+    margin-bottom: 20px;
   }
   
   /* New Editions Section */
