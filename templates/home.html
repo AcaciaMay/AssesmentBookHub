@@ -1,10 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
 
-
-<div class:w3-bar w3-blue-grey>
-margin-top: 50px;
-</div>
+{% if not selected_genre %}
+  
 
   <div class="intro-text">
     <p>Want to browse through a wide selection of books? Or check the availability of a certain book at your local library?</p>
