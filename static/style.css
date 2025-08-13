@@ -14,8 +14,10 @@ body {
     font-family: 'Alice', serif;
   }
 
+
   .intro-text {
     display: right;
+    float: right;
     background-color: #c5dae6;
     width: 25%;
     margin: 20px;
@@ -60,6 +62,7 @@ body {
     border-radius: 4px;
     margin-bottom: 1px;
   }
+
   .all-books-grid {
     display: flex;
     flex-wrap: wrap;
