@@ -53,7 +53,7 @@ body {
   }
   
   .card {
-    background-color: white;
+    background-color: #c5dae6;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
@@ -78,7 +78,7 @@ body {
   .book-card {
     display: flex;
     width: 30%;
-    background: #f8f8f8;
+    background: #547a73;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
