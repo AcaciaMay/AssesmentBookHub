@@ -20,7 +20,7 @@ body {
   width: 100%;
 }
 
-  .intro-text {
+ .intro-text {
     display: right;
     float: right;
     background-color: #c5dae6;
@@ -29,6 +29,7 @@ body {
     padding: 20px;
     border-radius: 20px;
   }
+
   
  
   .editions-container {
