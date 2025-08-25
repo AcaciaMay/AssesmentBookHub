@@ -34,6 +34,9 @@
   <div class="all-books-grid">
     {% for book in books %}
     <div class="book-card">
+      <div class "book-image"> 
+      <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[4] }}">
+      </div>
       <div class="book-info">
         <h3>{{ book[1] }}</h3>
         <p><strong>Author:</strong> {{ book[2] }}</p>
