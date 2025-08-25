@@ -20,6 +20,16 @@ body {
   width: 100%;
 }
 
+.navbar {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+}
+
+.search-bar {
+margin: 0;
+}
+
  .intro-text {
     display: right;
     float: right;
