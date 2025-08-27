@@ -1,16 +1,22 @@
 body {
     font-family: 'Alice', serif;
     background-color: #86c8bd;
-    color: #333;
+    color: #000000;
     margin: 0;
     padding: 0;
   }
- .w3-container.w3-bookhub{
+ .w3-container1{
     background-color: #547a73;
     margin-top: 40px;
 
  } 
 
+ .w3-container1 h1{
+    font-size: 85px;
+    font-family: 'Alice', serif;
+    color: #000000;
+
+ }
 .search-bar {
 margin-left: 100px;
 }
