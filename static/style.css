@@ -16,9 +16,9 @@ body {
   }
 
   header h1 {
-    font-size: 48px;
+    font-size: 150px;
     margin: 0;
-    padding: 20px;
+    padding: 120px;
     font-family: 'Alice', serif;
   }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .search-bar {
-margin: 0;
+margin: 100;
 }
 
  .intro-text {
