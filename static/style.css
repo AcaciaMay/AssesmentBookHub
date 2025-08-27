@@ -5,17 +5,11 @@ body {
     margin: 0;
     padding: 0;
   }
-  
- header h1 body{
-    display: left;
-    background-color: #010202;
-    Width: 45%;
-    margin: 2px;
-    padding: 10px;
-    border-radius: 10px;
-  }
+ .w3-container.w3-bookhub{
+    background-color: #547a73;
 
-  header h1 {
+ } 
+   header h1 {
     font-size: 150px;
     margin: 0;
     padding: 120px;
@@ -38,8 +32,12 @@ body {
 margin: 100;
 }
 
- .intro-text {
-    display: right;
+ 
+ .intro-text-container{
+    background-color: #547a73;
+
+ } 
+  .intro-text {
     float: right;
     background-color: #c5dae6;
     width: 25%;
