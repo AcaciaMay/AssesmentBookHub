@@ -69,13 +69,17 @@ body {
   }
 
   .w3-bar1{
- background-color: #000000;
+ background-color:  #547a73;
  margin-top: 525px;
 }
- 
-.search-bar {
-margin-left: 10px;
+.w3-button{
+  margin-left: 10px;
 }
+.w3-bar-item{
+  margin-left: 100px;
+}
+ 
+
 
   .all-books-grid {
     display: flex;
