@@ -15,13 +15,16 @@ body {
     font-size: 85px;
     font-family: 'Alice', serif;
     color: #000000;
-
  }
+.w3-bar1{
+ background-color: #000000;
+}
+ 
 .search-bar {
-margin-left: 100px;
+margin-left: 10px;
 }
 
- .intro-text-container{
+ .w3container2{
     background-color: #547a73;
 
  } 
