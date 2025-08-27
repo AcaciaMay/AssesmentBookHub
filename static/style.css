@@ -7,6 +7,7 @@ body {
   }
  .w3-container.w3-bookhub{
     background-color: #547a73;
+    margin-top: 40px;
 
  } 
    title{
@@ -17,10 +18,9 @@ body {
   }
 
 .search-bar {
-margin: 100;
+margin-left: 100px;
 }
 
- 
  .intro-text-container{
     background-color: #547a73;
 
