@@ -30,6 +30,83 @@
 </div>
 {% endif %}
 
+<body>
+   <nav class="w3-bar1">
+  <a href="/" class="w3-bar-item w3-button">Home</a>
+  <form method="GET" action="/" style="display:inline-block; margin-left: 10px;">
+    <select name="genre" class="w3-select w3-bar-item" style="width: 200px; display: inline-block;">
+      <option value="">Select Genre</option>
+      {% for genre in genres %}
+        <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
+          {{ genre['Genre'] }}
+        </option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="w3-button w3-bar-item w3-teal" style="display: inline-block;">Filter</button>
+  </form>
+<form method="GET" action="{{ url_for('search') }}" class="w3-bar-item">
+            <input class="w3-input w3-bar-item" type="text"  name="q" placeholder="Search for a book..." required>
+        </form>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle Light/Dark Mode</title>
+    <style>
+        
+        .light-mode {
+            background-color: #86c8bd;
+            color: black;
+        }
+
+        
+        .dark-mode {
+            background-color: #851b47;
+            color: #000000;  
+            
+        }
+        
+        
+        
+
+        .toggle-btn {
+            margin-top: 20px;
+            padding: 1px 2px;
+        }
+    
+    </style>
+</head>
+<body class="light-mode">
+    <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+
+    <script>
+        let isDark = false;
+
+        function toggleMode() {
+            const body = document.body;
+            const button = document.querySelector('.toggle-btn');
+            isDark = !isDark;
+
+            if (isDark) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                button.textContent = "Light Mode";
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                button.textContent = "Dark Mode";
+            }
+        }
+    </script>
+</body>
+</html>
+
+</nav>
+
+</body>
+</html>
+
 
 <div class="all-books-section">
   <h2>All Books{% if selected_genre %} – {{ selected_genre }}{% endif %}</h2>
