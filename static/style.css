@@ -1,4 +1,3 @@
-
 html {
   scroll-behavior: smooth;
 }
@@ -12,7 +11,6 @@ body.dark-mode {
   background-color: #851b47;
   color: #000; 
 }
-
 
 .toggle-btn {
   padding: 6px 12px;
@@ -28,16 +26,44 @@ body.dark-mode .top-section {
   color: #000; 
 }
 
+/* --- Page Layout --- */
 .top-section {
+  display: flex;              
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;                  
   background-color: #547a73;
   border-radius: 20px;
   padding: 30px;
   margin: 20px;
 }
 
-/* BookHub Title */
+/* Left Column = Title + Subtitle (in a box) + New Editions */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Right Column = Intro Texts */
+.right-column {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Header --- */
 .header-container {
-  margin-bottom: 20px;
+  background-color: #c5dae6;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+body.dark-mode .header-container {
+  background-color: #24181e;
+  color: #b8d6e3;
 }
 
 .main-title {
@@ -54,12 +80,10 @@ body.dark-mode .top-section {
   margin-top: 5px;
 }
 
+/* --- Intro Section --- */
 .intro-container {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  justify-content: center; 
 }
 
 .intro-box {
@@ -76,14 +100,11 @@ body.dark-mode .intro-box {
   color: #b8d6e3; 
 }
 
-
-/* New Editions */
+/* --- New Editions --- */
 .new-editions-container {
   background-color: #c5dae6;
   border-radius: 15px;
   padding: 20px;
-  margin: 20px auto;
-  width: 60%;          
 }
 
 body.dark-mode .new-editions-container {
@@ -91,6 +112,10 @@ body.dark-mode .new-editions-container {
   color: #b8d6e3; 
 }
 
+.new-editions-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 .card-grid {
   display: flex;
@@ -99,18 +124,17 @@ body.dark-mode .new-editions-container {
 }
 
 .card {
-  background: none;
-  border: none;
   width: 30%;
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* Book Grid */
+/* --- All Books Section --- */
 .all-books-section {
   padding: 40px 20px 20px;
 }
@@ -146,7 +170,7 @@ body.dark-mode .new-editions-container {
   flex: 1;
 }
 
-/* Nav Bar at Bottom */
+/* --- Navbar --- */
 .custom-navbar {
   display: flex;
   align-items: center;

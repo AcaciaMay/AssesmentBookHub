@@ -12,38 +12,50 @@
 
 <body class="light-mode">
 
-
+    <!-- Top Section: Left (Header + New Editions), Right (Intro) -->
     <div class="top-section">
-        <div class="header-container">
-            <h1 class="main-title">BookHub</h1>
-            <p class="subtitle">An Online Book Catalogue</p>
-        </div>
 
-        <div class="intro-container">
-            <div class="intro-box">
-                <p>Want to browse through a wide selection of books? Or check the availability of a certain book at your local Library?</p>
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Header (Title + Subtitle) -->
+            <div class="header-container">
+                <h1 class="main-title">BookHub</h1>
+                <p class="subtitle">An Online Book Catalogue</p>
             </div>
-            <div class="intro-box">
-                <p>Then this is the website for you, we have a large catalogue of books and the ability to provide accurate information on a local books availability.</p>
-            </div>
-        </div>
 
-        <div class="new-editions-container">
-            <div class="card-grid">
-                {% for book in books[:3] %}
-                <div class="card">
-                    <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
+            <!-- New Editions -->
+            <div class="new-editions-container">
+                <h3>New Editions</h3>
+                <div class="card-grid">
+                    {% for book in books[:3] %}
+                    <div class="card">
+                        <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
+
+        <!-- Right Column (Intro Texts) -->
+        <div class="right-column">
+            <div class="intro-container">
+                <div class="intro-box">
+                    <p>Want to browse through a wide selection of books? Or check the availability of a certain book at your local Library?</p>
+                </div>
+                <div class="intro-box">
+                    <p>Then this is the website for you, we have a large catalogue of books and the ability to provide accurate information on a local books availability.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <!-- Main Content -->
     <div class="content-container">
         {% block body %}{% endblock %}
     </div>
 
-    
+    <!-- Navigation -->
     <nav class="custom-navbar">
         <a href="/" class="nav-button">Home</a>
 
@@ -66,7 +78,6 @@
         <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
     </nav>
 
-    
     <script>
         let isDark = false;
 
