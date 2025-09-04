@@ -48,14 +48,20 @@ body.dark-mode .header-container {
   color: #000;
 }
 
+.intro-editions-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;  /* align both at the top */
+  gap: 20px;               /* space between them */
+  margin: 20px;
+}
 
 .intro-wrapper {
+  flex: 1;
+  max-width: 500px;
   background-color: #547a73;
   padding: 30px;
-  border-radius: 0 0 20px 20px; 
-  max-width: 500px;
-  margin: -20px 20px 20px auto; 
-  
+  border-radius: 0 0 20px 20px;
 }
 
 
@@ -87,12 +93,12 @@ body.dark-mode .intro-box {
 
 
 .new-editions-container {
+  flex: 1;
+  max-width: 750px;
   background-color: #c5dae6;
   border-radius: 15px;
-  padding: 20px;     
-  margin: 20px 0 0 20px;  
-  width: 750px;
-  text-align: center;     
+  padding: 20px;
+  text-align: center;
 }
     
 body.dark-mode .new-editions-container {
