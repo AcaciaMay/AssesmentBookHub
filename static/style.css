@@ -60,11 +60,8 @@ body.dark-mode .header-container {
 }
 
 body.dark-mode .intro-wrapper{
-background-color: #547a73; 
-
+background-color: #0ba076; 
 }
-
-
 
 .intro-container-container {
   display: flex;
