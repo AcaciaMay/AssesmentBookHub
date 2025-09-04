@@ -132,20 +132,16 @@ body.dark-mode .new-editions-container {
   height: 275px;      
   border-radius: 8px;
 }
-
 .all-books-section {
   padding: 40px 20px 20px;  
 }
 
 .all-books-grid {
   display: grid;  
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);  /* ✅ 3 cards per row */
   gap: 25px;  
   margin: 20px; 
-  border-radius: 15px;        
-  overflow: hidden;          
 }
-
 
 .book-card-link {
   text-decoration: none;
@@ -153,17 +149,15 @@ body.dark-mode .new-editions-container {
   display: block;
 }
 
-
 .book-card {
   display: flex;  
-  width: 650px;
-  height: 300px;                        
+  flex-direction: row;        /* ✅ image + text side by side */
+  align-items: flex-start;    /* top-align text with image */
   background: #547a73;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 10px;        /* ✅ rounded edges */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: left;        
   cursor: pointer;          
 }
 
@@ -176,45 +170,38 @@ body.dark-mode .book-card {
   background-color: #0ba076;
 }
 
-.all-books-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin: 20px;
-}
-
 .book-image {
-  width: 30%;
+  width: 120px;               /* ✅ fixed image width */
+  height: 180px;              /* ✅ fixed image height */
   margin-right: 15px;
+  flex-shrink: 0;             /* don’t shrink the image */
 }
 
 .book-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;          /* keep proportions */
   border-radius: 5px;
 }
 
 .book-info {
-  flex: 1;
-  width: 100%;
+  flex: 1;                    /* take remaining space */
 }
 
 .book-info h3 {
   margin: 10px 0;
-  margin-left: 0px;
-  font-size: 1.3rem;   /* ✅ slightly bigger */
-  font-weight: bold;   /* ✅ bold */
+  font-size: 1.2rem;           /* slightly bigger */
+  font-weight: bold;           /* ✅ bold */
 }
 
 .book-info h3 a {
-  text-decoration: none;    
+  text-decoration: none;
   color: black;
-  margin-left: 50px;
 }
 
-
-
-
+.book-info h3 a:hover {
+  text-decoration: underline;
+}
 
 
 .custom-navbar {
