@@ -133,17 +133,19 @@ body.dark-mode .new-editions-container {
   border-radius: 8px;
 }
 
-
 .all-books-section {
-  padding: 40px 20px 20px;
+  padding: 40px 20px 20px;  
 }
 
 .all-books-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;   
-
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;  
+  margin: 20px; 
+  border-radius: 15px;        
+  overflow: hidden;          
 }
+
 
 .book-card-link {
   text-decoration: none;
@@ -198,13 +200,16 @@ body.dark-mode .book-card {
 }
 
 .book-info h3 {
-  margin: 5px 0;
-  font-size: 1.1rem;
+  margin: 10px 0;
+  margin-left: 0px;
+  font-size: 1.3rem;   /* ✅ slightly bigger */
+  font-weight: bold;   /* ✅ bold */
 }
 
 .book-info h3 a {
   text-decoration: none;    
   color: black;
+  margin-left: 50px;
 }
 
 
