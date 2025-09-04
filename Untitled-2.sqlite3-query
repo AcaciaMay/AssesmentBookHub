@@ -1,6 +1,7 @@
 -- database: ./database.db
 
 SELECT * FROM Books;
+
 INSERT INTO Books (ISBN, Title, Author, Genre, Description, Subjects, Audience, Copies, Availability, Location, Publishers) VALUES
 ("0-307-26543-9", "The Road", "Cormac McCarthy", "Dystopian Fiction", "A post-apocalyptic novel that follows a father and son on a harrowing journey across a desolate, ash-filled landscape after an unspecified cataclysm has destroyed civilization", "Tragedy, Science Fiction, Post Apocalyptic world.", "11+", 5, "Available", "Whangārei Central Library", "Pan Macmillan"),
 ("978-0451524935", "1984", "George Orwell", "Dystopian Fiction", "A chilling depiction of perpetual war, omnipresent government surveillance, and public manipulation.", "Totalitarianism, Surveillance, Rebellion", "16+", 4, "Available", "Kamo Library", "Penguin Random House"),
