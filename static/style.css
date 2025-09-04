@@ -21,24 +21,10 @@ body.dark-mode {
   border: 2px solid #000;
   font-weight: bold;
 }
-.top-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* makes intro stick near header */
-  gap: 20px;
-  margin: 20px;
-}
-
-.header-intro {
-  display: flex;
-  flex-direction: column; /* stack header + intro */
-  gap: 10px; /* small spacing between them */
-  flex: 1;
-}
-
 .header-container {
   background-color: #547a73;
   padding: 30px;
+  margin: 20px;
   border-radius: 20px 20px 0 20px; 
   text-align: left;
 }
@@ -71,11 +57,13 @@ body.dark-mode .header-container {
 }
 
 .intro-wrapper {
-  background-color: #547a73;
-  padding: 20px;
-  border-radius: 0 0 20px 20px; 
+  flex: 1;
   max-width: 500px;
+  background-color: #547a73;
+  padding: 30px;
+  border-radius: 0 0 20px 20px;
 }
+
 
 body.dark-mode .intro-wrapper{
 background-color: #0ba076; 
