@@ -31,7 +31,7 @@ def inject_genres():
     return dict(genres=genres)
 
 
-# ✅ Home route (only one definition now)
+
 @app.route("/")
 def home():
     genre = request.args.get("genre", "")
