@@ -1,14 +1,19 @@
 {% extends "layout.html" %}
 {% block body %}
  
-<div class="top-section">
+<div class="header-container">
+  <div class="header-left">
+    <h1 class="main-title">BookHub</h1>
+    <p class="subtitle">An Online Book Catalogue</p>
+  </div>
 
-  <div class="left-column">
-    
-    <div class="header-container">
-      <h1 class="main-title">BookHub</h1>
-      <p class="subtitle">An Online Book Catalogue</p>
-    </div>
+  <div class="header-right">
+    <img src="{{ url_for('static', filename='images/1.png') }}" alt="Logo" class="top-logo">
+  </div>
+</div>
+
+
+ 
 
    
     <div class="intro-editions-wrapper">

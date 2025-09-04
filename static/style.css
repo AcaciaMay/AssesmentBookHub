@@ -26,9 +26,18 @@ body.dark-mode {
   background-color: #547a73;
   padding: 30px;
   margin: 20px;
-  border-radius: 20px 20px 0 20px; 
-  text-align: left;
+  border-radius: 20px 20px 0 20px;
+  
+  display: flex;                  
+  justify-content: space-between; 
+  align-items: center;            
 }
+
+.top-logo {
+  max-height: 200px;  
+  width: auto;
+}
+
 
 .main-title {
   font-size: 85px;
@@ -160,7 +169,7 @@ body.dark-mode .new-editions-container {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   
-  height: 250px;      
+  height: 270px;      
   overflow: hidden;   
 }
 
