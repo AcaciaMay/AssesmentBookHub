@@ -85,27 +85,27 @@
 </html>
 
  
-    <div id="all-books" class="all-books-section">
-      <h2>All Books{% if selected_genre %} – {{ selected_genre }}{% endif %}</h2>
-      <div class="all-books-grid">
-        {% for book in books %}
-          <div class="book-card">
-            <div class="book-image"> 
-              <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[4] }}">
-            </div>
-            <div class="book-info">
-              <h3>{{ book[1] }}</h3>
-              <p><strong>Author:</strong> {{ book[2] }}</p>
-              <p><strong>Genre:</strong> {{ book[3] }}</p>
-              <p><strong>Subjects:</strong> {{ book[4] }}</p>
-            </div>
+ <div id="all-books" class="all-books-section">
+  <h2>All Books{% if selected_genre %} – {{ selected_genre }}{% endif %}</h2>
+  <div class="all-books-grid">
+    {% for book in books %}
+      <a href="{{ url_for('book_detail', isbn=book[10]) }}" class="book-link">
+        <div class="book-card">
+          <div class="book-image"> 
+            <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
           </div>
-        {% endfor %}
-      </div>
-    </div>
-
+          <div class="book-info">
+            <h3>{{ book[1] }}</h3>
+            <p><strong>Author:</strong> {{ book[2] }}</p>
+            <p><strong>Genre:</strong> {{ book[3] }}</p>
+            <p><strong>Subjects:</strong> {{ book[4] }}</p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
   </div>
 </div>
+
 
 
 {% endblock %}

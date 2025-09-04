@@ -144,37 +144,47 @@ body.dark-mode .new-editions-container {
 .all-books-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 65px;
+  gap: 30px;              /* smaller gap looks cleaner */
   margin-bottom: 20px;
 }
 
 .book-card {
   display: flex;
+  align-items: flex-start; /* align text with image top */
   width: 30%;
   background: #547a73;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height: 220px;      /* ✅ consistent height for cards */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-body.dark-mode .book-card{
+/* Hover effect */
+.book-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .book-card {
   background-color: #0ba076;
+}
+
+.book-image {
+  flex: 0 0 120px;     /* ✅ fixed width */
+  margin-right: 15px;
 }
 
 .book-image img {
   width: 100%;
-  height: auto;
+  height: 180px;       /* ✅ consistent height */
+  object-fit: cover;   /* ✅ keeps aspect ratio without stretching */
   border-radius: 5px;
-}
-.book-image {
-  flex: 0 0 120px;      /* ✅ Fixed width for image */
-  height: 180px;        /* ✅ Consistent height */
 }
 
 .book-info {
   flex: 1;
 }
-
 
 
 
