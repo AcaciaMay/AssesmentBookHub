@@ -23,6 +23,10 @@ body.dark-mode {
   font-weight: bold;
 }
 
+body.dark-mode .top-section {
+  background-color: #0ba076;
+  color: #000; 
+}
 
 .top-section {
   background-color: #547a73;
@@ -58,16 +62,6 @@ body.dark-mode {
   justify-content: center; 
 }
 
-.intro-container img {
-  width: 180px;       
-  height: 270px;       
-  object-fit: cover;   
-  border-radius: 8px;
-  flex-shrink: 0;      
-}
-
-
-
 .intro-box {
   background-color: #c5dae6;
   padding: 20px;
@@ -77,6 +71,12 @@ body.dark-mode {
   font-family: 'Alice', serif;
 }
 
+body.dark-mode .intro-box {
+  background-color: #24181e;
+  color: #b8d6e3; 
+}
+
+
 /* New Editions */
 .new-editions-container {
   background-color: #c5dae6;
@@ -84,6 +84,11 @@ body.dark-mode {
   padding: 20px;
   margin: 20px auto;
   width: 60%;          
+}
+
+body.dark-mode .new-editions-container {
+  background-color: #24181e;
+  color: #b8d6e3; 
 }
 
 
