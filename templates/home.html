@@ -10,22 +10,7 @@
                 <h1 class="main-title">BookHub</h1>
                 <p class="subtitle">An Online Book Catalogue</p>
             </div>
-
-           
-            
-            <div class="new-editions-container">
-                <h3>New Editions</h3>
-                <div class="card-grid">
-                    {% for book in books[:3] %}
-                    <div class="card">
-                        <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-     
+              
 <div class="intro-wrapper">
   <div class="intro-container-container">
     <div class="intro-box">
@@ -36,6 +21,18 @@
     </div>
   </div>
 </div>
+
+<div class="new-editions-container">
+                <h3>New Editions</h3>
+                <div class="card-grid">
+                    {% for book in books[:3] %}
+                    <div class="card">
+                        <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
 
 
   
