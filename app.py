@@ -112,6 +112,7 @@ def book_detail(isbn):
             "Image URL",
             Description,
             Availability,
+            Location,
             Publishers, 
             ISBN
         FROM Books

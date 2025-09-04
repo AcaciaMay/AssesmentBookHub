@@ -235,6 +235,10 @@ body.dark-mode .nav-button{
   max-width: 1300px;
 }
 
+body.dark-mode .book-container{
+  background-color: #0ba076;
+}
+
 .book-cover {
   width: 100%;
   max-width: 200px;
@@ -253,6 +257,20 @@ body.dark-mode .nav-button{
   background-color: #c7d9e0;
   padding: 15px;
   border-radius: 12px;
+}
+body.dark-mode .book-header{
+  background-color:#24181e;
+  color: #c5dae6;
+}
+
+body.dark-mode .book-description{
+  background-color:#24181e;
+  color: #c5dae6;
+}
+
+body.dark-mode .book-details{
+  background-color:#24181e;
+  color: #c5dae6;
 }
 
 .book-details {
