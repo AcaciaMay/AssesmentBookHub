@@ -1,18 +1,78 @@
 {% extends "layout.html" %}
 {% block body %}
-<div class="two-column">
-    <img src="{{ book[7] }}" alt="{{ book[1] }}" width="100" height="300">
 
-    <div class="info">
-        <h1>{{ book[1] }}</h1>
-        <p><strong>Author:</strong> {{ book[2] }}</p>
-        <p><strong>Genre:</strong> {{ book[3] }}</p>
-        <p><strong>Subjects:</strong> {{ book[4] }}</p>
-        <p><strong>Audience:</strong> {{ book[5] }}</p>
-        <p><strong>Copies:</strong> {{ book[6] }}</p>
-        <p><strong>Availability:</strong> {{ book[9] }}</p>
+<!-- Navigation -->
+    <nav class="custom-navbar">
+        <a href="/" class="nav-button">Home</a>
+
+        <form method="GET" action="/" class="nav-form">
+            <select name="genre" class="nav-select">
+                <option value="">Genre</option>
+                {% for genre in genres %}
+                    <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
+                        {{ genre['Genre'] }}
+                    </option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="nav-button">Search</button>
+        </form>
+
+        <form method="GET" action="{{ url_for('search') }}" class="nav-form">
+            <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
+        </form>
+
+        <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+    </nav>
+
+    <script>
+        let isDark = false;
+
+        function toggleMode() {
+            const body = document.body;
+            const button = document.querySelector('.toggle-btn');
+            isDark = !isDark;
+
+            if (isDark) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                button.textContent = "Light Mode";
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                button.textContent = "Dark Mode";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+<div class="book-detail-container">
+    <!-- Left side: book cover -->
+    <div class="book-cover">
+        <img src="{{ url_for('static', filename=book[6]) }}" alt="Cover of {{ book[0] }}">
+    </div>
+
+    <!-- Middle section: title, author, description -->
+    <div class="book-main-info">
+        <div class="title-box">
+            <h1>{{ book[0] }}</h1>
+            <p class="author">{{ book[1] }}</p>
+        </div>
+        <div class="desc-box">
+            <p>{{ book[7] }}</p>
+        </div>
+    </div>
+
+    <!-- Right section: details -->
+    <div class="book-extra-info">
+        <p><strong>Subjects</strong> {{ book[3] }}</p>
+        <p><strong>Audience</strong> {{ book[4] }}</p>
+        <p><strong>Copies</strong> {{ book[5] }}</p>
+        <p><strong>Availability</strong> {{ book[8] }}</p>
         <p><strong>Location</strong> {{ book[9] }}</p>
-        <p><strong>Description:</strong><br>{{ book[8] }}</p>
+        <p><strong>Publishers</strong> {{ book[10] }}</p>
+        <p><strong>ISBN</strong> {{ book[11] }}</p>
     </div>
 </div>
 {% endblock %}

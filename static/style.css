@@ -156,6 +156,10 @@ body.dark-mode .new-editions-container {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+body.dark-mode .book-card{
+  background-color: #0ba076;
+}
+
 .book-image {
   width: 30%;
   margin-right: 15px;
@@ -218,3 +222,52 @@ body.dark-mode .nav-button{
   align-items: center;
   gap: 8px;
 }
+
+.book-detail-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-cover img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-main-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-box {
+  background-color: #c5dae6;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.title-box h1 {
+  margin: 0;
+}
+
+.title-box .author {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.desc-box {
+  background-color: #c5dae6;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.book-extra-info {
+  flex: 1;
+  background-color: #c5dae6;
+  padding: 15px;
+  border-radius: 12px;
+}
+
