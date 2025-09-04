@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<!-- Custom Nav Bar -->
 <div class="custom-navbar">
   <a href="{{ url_for('home') }}" class="nav-button">Home</a>
   <a href="#all-books" class="nav-button">All Books</a>
@@ -9,17 +8,24 @@
   <a href="{{ url_for('home') }}" class="nav-button">Authors</a>
 </div>
 
-<!-- All Books Section -->
+
 <div id="all-books" class="all-books-section">
   <h2>All Books{% if selected_genre %} – {{ selected_genre }}{% endif %}</h2>
   <div class="all-books-grid">
     {% for book in books %}
-    <div class="book-card">
-      <div class="book-image"> 
-        <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[4] }}">
+      <div class="book-card">
+        <div class="book-image"> 
+          <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[4] }}">
+        </div>
+        <div class="book-info">
+          <h3>{{ book[1] }}</h3>
+          <p><strong>Author:</strong> {{ book[2] }}</p>
+          <p><strong>Genre:</strong> {{ book[3] }}</p>
+          <p><strong>Subjects:</strong> {{ book[4] }}</p>
+        </div>
       </div>
-      <div class="book-info">
-        <h3>{{ book[1] }}</h3>
-        <p><strong>Author:</strong> {{ book[2] }}</p>
-        <p><strong>Genre:</strong> {{ book[3] }}</p>
-        <p><stron
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

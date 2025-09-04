@@ -12,7 +12,7 @@
 
 <body class="light-mode">
 
-    <!-- Top Section with Intro + New Editions -->
+
     <div class="top-section">
         <div class="header-container">
             <h1 class="main-title">BookHub</h1>
@@ -39,12 +39,11 @@
         </div>
     </div>
 
-    <!-- Main Page Content -->
     <div class="content-container">
         {% block body %}{% endblock %}
     </div>
 
-    <!-- Navigation Bar (Below content - scroll to see) -->
+    
     <nav class="custom-navbar">
         <a href="/" class="nav-button">Home</a>
 
@@ -67,7 +66,7 @@
         <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
     </nav>
 
-    <!-- Light/Dark Toggle Script -->
+    
     <script>
         let isDark = false;
 
