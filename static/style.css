@@ -1,10 +1,10 @@
 body {
-    font-family: 'Alice', serif;
-    background-color: #86c8bd;
-    color: #000000;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Alice', serif;
+  background-color: #86c8bd;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
  .w3-container1{
     background-color: #547a73;
     margin-top: 40px;
@@ -21,30 +21,39 @@ body {
     background-color: #547a73;
 
  } 
-  .intro-text {
-    float: right;
-    background-color: #c5dae6;
-    width: 25%;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 20px;
-  }
+
+ .subtitle {
+  font-size: 24px;
+  font-family: 'Alice', serif;
+  margin-top: -20px;
+  color: #000000;
+}
+ .intro-text {
+  float: right;
+  background-color: #c5dae6;
+  width: 25%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: 'Alice', serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
   
  
   .editions-container {
-    display: left;
-    background-color: #c5dae6;
-    Width: 45%;
-    margin: 2px;
-    padding: 10px;
-    border-radius: 10px;
-  }
+  background-color: #c5dae6;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  width: 45%;
+  float: left;
+}
   
   .editions-container h2 {
-    font-size: 30px;
-    margin-bottom: 5px;
-  }
-  
+  font-family: 'Alice', serif;
+  font-size: 24px;
+}
   
   .card-grid {
     display: flex;
