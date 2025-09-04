@@ -23,16 +23,16 @@
 </div>
 
 <div class="new-editions-container">
-                <h3>New Editions</h3>
-                <div class="card-grid">
-                    {% for book in books[:3] %}
-                    <div class="card">
-                        <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+  <h2>New Editions</h2>
+  <div class="card-grid">
+    {% for book in books[:3] %}
+    <div class="card">
+      <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 
  <div id="all-books" class="all-books-section">
   <h2>All Books{% if selected_genre %} – {{ selected_genre }}{% endif %}</h2>

@@ -57,7 +57,9 @@ body.dark-mode .header-container {
   margin: 0 20px 20px auto; 
   position: relative;
   top: -20px; 
+  margin-bottom: 20px;   /* ⬅ ensures space before New Editions */
 }
+
 
 body.dark-mode .intro-wrapper{
 background-color: #0ba076; 
@@ -89,14 +91,21 @@ body.dark-mode .intro-box {
 .new-editions-container {
   background-color: #c5dae6;
   border-radius: 15px;
-  padding: 20px;
-  margin: 20px;
-  width: 140px;  
+  padding: 20px;     
+  margin: 20px 0 0 20px;  
+  width: 750px;
+  text-align: center;     
 }
-
+    
 body.dark-mode .new-editions-container {
   background-color: #24181e;
-  color: #b8d6e3; 
+  color: #b8d6e3;
+}
+
+.new-editions-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-family: 'Alice', serif;
 }
 
 .card-grid {
@@ -107,14 +116,19 @@ body.dark-mode .new-editions-container {
 
 .card {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card img {
-  width: 100%;
-  height: 220px;   /* uniform height */
+  width: 200px;       /* fixed width */
+  height: 250px;      /* fixed height */
   object-fit: cover;
   border-radius: 8px;
 }
+
+
 
 /* ====== Books Section ====== */
 .all-books-section {
