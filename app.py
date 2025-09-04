@@ -31,43 +31,32 @@ def inject_genres():
     return dict(genres=genres)
 
 
+# ✅ Home route (only one definition now)
 @app.route("/")
 def home():
     genre = request.args.get("genre", "")
+
+    base_select = """
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
+            Title,
+            Author,
+            Genre,
+            Subjects,
+            Audience,
+            Copies,
+            "Image URL" AS ImageURL,
+            Description,
+            Availability,
+            ISBN
+        FROM Books
+    """
+
     if genre:
-        sql = """
-            SELECT 
-                ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-                Title,
-                Author,
-                Genre,
-                Subjects,
-                Audience,
-                Copies,
-                "Image URL",
-                Description,
-                Availability
-            FROM Books
-            WHERE Genre = ?
-            ORDER BY Title ASC;
-        """
+        sql = base_select + " WHERE Genre = ? ORDER BY Title ASC;"
         books = query_db(sql, (genre,))
     else:
-        sql = """
-            SELECT 
-                ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNum,
-                Title,
-                Author,
-                Genre,
-                Subjects,
-                Audience,
-                Copies,
-                "Image URL",
-                Description,
-                Availability
-            FROM Books
-            ORDER BY Title ASC;
-        """
+        sql = base_select + " ORDER BY Title ASC;"
         books = query_db(sql)
 
     return render_template("home.html", books=books, selected_genre=genre)

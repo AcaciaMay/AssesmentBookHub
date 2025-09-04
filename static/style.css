@@ -135,6 +135,7 @@ body.dark-mode .new-editions-container {
 
 
 
+
 /* ====== Books Section ====== */
 .all-books-section {
   padding: 40px 20px 20px;
@@ -160,20 +161,22 @@ body.dark-mode .book-card{
   background-color: #0ba076;
 }
 
-.book-image {
-  width: 30%;
-  margin-right: 15px;
-}
-
 .book-image img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
+.book-image {
+  flex: 0 0 120px;      /* ✅ Fixed width for image */
+  height: 180px;        /* ✅ Consistent height */
+}
 
 .book-info {
   flex: 1;
 }
+
+
+
 
 /* ====== Navbar ====== */
 .custom-navbar {
