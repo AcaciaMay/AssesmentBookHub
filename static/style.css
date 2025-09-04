@@ -223,51 +223,40 @@ body.dark-mode .nav-button{
   gap: 8px;
 }
 
-.book-detail-container {
-  display: flex;
+
+.book-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
   gap: 20px;
+  background-color: #547a73;
   padding: 20px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 1300px;
 }
 
-.book-cover img {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
+.book-cover {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
 }
 
-.book-main-info {
-  flex: 2;
+.book-main {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.title-box {
-  background-color: #c5dae6;
+.book-header,
+.book-description,
+.book-details {
+  background-color: #c7d9e0;
   padding: 15px;
   border-radius: 12px;
 }
 
-.title-box h1 {
-  margin: 0;
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-.title-box .author {
-  font-size: 18px;
-  font-style: italic;
-  margin-top: 5px;
-}
-
-.desc-box {
-  background-color: #c5dae6;
-  padding: 15px;
-  border-radius: 12px;
-}
-
-.book-extra-info {
-  flex: 1;
-  background-color: #c5dae6;
-  padding: 15px;
-  border-radius: 12px;
-}
-

@@ -98,6 +98,7 @@ def search():
     return render_template("search_results.html", results=results, query=query)
 
 
+
 @app.route("/book/<isbn>")
 def book_detail(isbn):
     sql = """
@@ -119,7 +120,10 @@ def book_detail(isbn):
     book = query_db(sql, (isbn,), one=True)
     if not book:
         abort(404)
-    return render_template("book_detail.html", book=book)
+    return render_template("book.html", book=book)
+
+
+
 
 
 @app.route("/book/isbn/<isbn>")

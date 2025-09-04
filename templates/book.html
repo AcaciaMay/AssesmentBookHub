@@ -47,32 +47,29 @@
 </body>
 </html>
 
-<div class="book-detail-container">
-    <!-- Left side: book cover -->
-    <div class="book-cover">
-        <img src="{{ url_for('static', filename=book[6]) }}" alt="Cover of {{ book[0] }}">
-    </div>
+<div class="book-container">
+    <img src="{{ url_for('static', filename=book[6]) }}" alt="{{ book[0] }}" class="book-cover">
 
-    <!-- Middle section: title, author, description -->
-    <div class="book-main-info">
-        <div class="title-box">
+    <div class="book-main">
+        <div class="book-header">
             <h1>{{ book[0] }}</h1>
-            <p class="author">{{ book[1] }}</p>
+            <p><em>{{ book[1] }}</em></p>
         </div>
-        <div class="desc-box">
+
+        <div class="book-description">
             <p>{{ book[7] }}</p>
         </div>
     </div>
 
-    <!-- Right section: details -->
-    <div class="book-extra-info">
-        <p><strong>Subjects</strong> {{ book[3] }}</p>
-        <p><strong>Audience</strong> {{ book[4] }}</p>
-        <p><strong>Copies</strong> {{ book[5] }}</p>
-        <p><strong>Availability</strong> {{ book[8] }}</p>
-        <p><strong>Location</strong> {{ book[9] }}</p>
-        <p><strong>Publishers</strong> {{ book[10] }}</p>
-        <p><strong>ISBN</strong> {{ book[11] }}</p>
+    <div class="book-details">
+        <p><strong>Genre:</strong> {{ book[2] }}</p>
+        <p><strong>Subjects:</strong> {{ book[3] }}</p>
+        <p><strong>Audience:</strong> {{ book[4] }}</p>
+        <p><strong>Copies:</strong> {{ book[5] }}</p>
+        <p><strong>Availability:</strong> {{ book[8] }}</p>
+        <p><strong>Publishers:</strong> {{ book[9] }}</p>
+        <p><strong>ISBN:</strong> {{ book[10] }}</p>
     </div>
 </div>
 {% endblock %}
+
