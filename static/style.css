@@ -21,6 +21,7 @@ body.dark-mode {
   border: 2px solid #000;
   font-weight: bold;
 }
+
 .header-container {
   background-color: #547a73;
   padding: 30px;
@@ -62,6 +63,7 @@ body.dark-mode .header-container {
   background-color: #547a73;
   padding: 30px;
   border-radius: 0 0 20px 20px;
+  margin-top: -20px;
 }
 
 
@@ -126,9 +128,8 @@ body.dark-mode .new-editions-container {
 }
 
 .card img {
-  width: 200px;       /* fixed width */
-  height: 250px;      /* fixed height */
-  object-fit: cover;
+  width: 200px;       
+  height: 275px;      
   border-radius: 8px;
 }
 
@@ -177,10 +178,13 @@ body.dark-mode .new-editions-container {
   gap: 10px;
   background-color: #547a73;
   padding: 15px 20px;
-  border-radius: 12px;
-  margin: 40px 20px 60px;
+  border-radius: 0 0 12px 12px; 
+  margin: 0;                   
   flex-wrap: wrap;
   justify-content: center;
+  position: sticky;            
+  top: 0;
+  z-index: 1000;               
 }
 
 .nav-button {
