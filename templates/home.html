@@ -12,84 +12,52 @@
   </div>
 </div>
 
-
- 
-
-   
-    <div class="intro-editions-wrapper">
-
-      <div class="new-editions-container">
-        <h2>New Editions</h2>
-        <div class="card-grid">
-          {% for book in books[:3] %}
-          <div class="card">
-            <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
-          </div>
-          {% endfor %}
-        </div>
+<div class="intro-editions-wrapper">
+  <div class="new-editions-container">
+    <h2>New Editions</h2>
+    <div class="card-grid">
+      {% for book in books[:3] %}
+      <div class="card">
+        <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[1] }}">
       </div>
-
-      <div class="intro-wrapper">
-        <div class="intro-container-container">
-          <div class="intro-box">
-            <p>Want to browse through a wide selection of books? Or check the availability of a certain book at your local Library?</p>
-          </div>
-          <div class="intro-box">
-            <p>Then this is the website for you, we have a large catalogue of books and the ability to provide accurate information on a local books availability.</p>
-          </div>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
-    
+  </div>
 
-    
-    <nav class="custom-navbar">
-        <a href="/" class="nav-button">Home</a>
+  <div class="intro-wrapper">
+    <div class="intro-container-container">
+      <div class="intro-box">
+        <p>Want to browse through a wide selection of books? Or check the availability of a certain book at your local Library?</p>
+      </div>
+      <div class="intro-box">
+        <p>Then this is the website for you, we have a large catalogue of books and the ability to provide accurate information on a local books availability.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <form method="GET" action="/" class="nav-form">
-            <select name="genre" class="nav-select">
-                <option value="">Genre</option>
-                {% for genre in genres %}
-                    <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
-                        {{ genre['Genre'] }}
-                    </option>
-                {% endfor %}
-            </select>
-            <button type="submit" class="nav-button">Search</button>
-        </form>
+<nav class="custom-navbar">
+    <a href="/" class="nav-button">Home</a>
 
-        <form method="GET" action="{{ url_for('search') }}" class="nav-form">
-            <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
-        </form>
+    <form method="GET" action="/" class="nav-form">
+        <select name="genre" class="nav-select">
+            <option value="">Genre</option>
+            {% for genre in genres %}
+                <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
+                    {{ genre['Genre'] }}
+                </option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="nav-button">Search</button>
+    </form>
 
-        <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
-    </nav>
+    <form method="GET" action="{{ url_for('search') }}" class="nav-form">
+        <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
+    </form>
 
-    <script>
-        let isDark = false;
+    <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+</nav>
 
-        function toggleMode() {
-            const body = document.body;
-            const button = document.querySelector('.toggle-btn');
-            isDark = !isDark;
-
-            if (isDark) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                button.textContent = "Light Mode";
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                button.textContent = "Dark Mode";
-            }
-        }
-    </script>
-
-</body>
-</html>
-
- 
 <div id="all-books" class="all-books-section">
   <h2>All Books{% if selected_genre %} – {{ selected_genre }}{% endif %}</h2>
   <div class="all-books-grid">
@@ -110,7 +78,5 @@
     {% endfor %}
   </div>
 </div>
-
-
 
 {% endblock %}

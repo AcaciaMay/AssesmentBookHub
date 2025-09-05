@@ -8,7 +8,45 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.classList.add(savedTheme + "-mode");
+  })();
+</script>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
 </head>
+
+<script>
+  function applyTheme(theme) {
+    const body = document.body;
+    const button = document.querySelector('.toggle-btn');
+
+    if (theme === "dark") {
+      body.classList.add("dark-mode");
+      body.classList.remove("light-mode");
+      button.textContent = "Light Mode";
+    } else {
+      body.classList.add("light-mode");
+      body.classList.remove("dark-mode");
+      button.textContent = "Dark Mode";
+    }
+  }
+
+  function toggleMode() {
+    const currentTheme = localStorage.getItem("theme") || "light";
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    applyTheme(newTheme);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
+  });
+</script>
 
 <body class="light-mode">
 
