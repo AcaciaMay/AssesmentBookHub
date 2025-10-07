@@ -215,8 +215,10 @@ body.dark-mode .book-card {
   color: black;
 }
 
-.book-info h3 a:hover {
-  text-decoration: underline;
+.book-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 
