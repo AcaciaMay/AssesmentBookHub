@@ -324,7 +324,7 @@ body.dark-mode .book-details{
   flex-direction: column;
   gap: 10px;
 }
-.book-card-link {
+.book-card-link1 {
     text-decoration: none;
     color: inherit;
     display: block;
