@@ -154,8 +154,8 @@ body.dark-mode .new-editions-container {
 
 .book-card-link {
   text-decoration: none;
-  color: inherit;
-  display: block;
+    color: inherit;
+    display: block;
 }
 
 .book-card {
@@ -173,6 +173,7 @@ body.dark-mode .new-editions-container {
   overflow: hidden;   
 }
 
+
 .book-info {
   flex: 1;
   width: 75%;
@@ -182,8 +183,9 @@ body.dark-mode .new-editions-container {
 
 
 .book-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+ 
 }
 
 body.dark-mode .book-card {
@@ -324,7 +326,7 @@ body.dark-mode .book-details{
   flex-direction: column;
   gap: 10px;
 }
-.book-card-link1 {
+.book-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -338,5 +340,6 @@ body.dark-mode .book-details{
 .book-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+ 
 }
 
