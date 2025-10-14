@@ -2,27 +2,27 @@
 {% block body %}
 
 
-    <nav class="custom-navbar">
-        <a href="/" class="nav-button">Home</a>
+  <nav class="custom-navbar">
+    <a href="/" class="nav-button">Home</a>
 
-        <form method="GET" action="/" class="nav-form">
-            <select name="genre" class="nav-select">
-                <option value="">Genre</option>
-                {% for genre in genres %}
-                    <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
-                        {{ genre['Genre'] }}
-                    </option>
-                {% endfor %}
-            </select>
-            <button type="submit" class="nav-button">Search</button>
-        </form>
+    <form method="GET" action="/" class="nav-form">
+        <select name="genre" class="nav-select" onchange="this.form.submit()">
+            <option value="">Genre</option>
+            {% for genre in genres %}
+                <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
+                    {{ genre['Genre'] }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
 
-        <form method="GET" action="{{ url_for('search') }}" class="nav-form">
-            <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
-        </form>
+    <form method="GET" action="{{ url_for('search') }}" class="nav-form">
+        <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
+    </form>
 
-        <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
-    </nav>
+    <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+</nav>
+
 
     <script>
         let isDark = false;
@@ -47,29 +47,26 @@
 </body>
 </html>
 
-
 <h2>Search Results for "{{ query }}"</h2>
 
 {% if results %}
   <div class="all-books-grid">
     {% for book in results %}
-      <div class="book-card">
-        <div class="book-image"> 
-          <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[4] }}">
+      <a href="{{ url_for('book_detail', isbn=book[10]) }}" class="book-card-link">
+        <div class="book-card">
+          <div class="book-image"> 
+            <img src="{{ url_for('static', filename=book[7]) }}" alt="Cover of {{ book[4] }}">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">{{ book[1] }}</h3>
+            <p><strong>Author:</strong> {{ book[2] }}</p>
+            <p><strong>Genre:</strong> {{ book[3] }}</p>
+            <p><strong>Subjects:</strong> {{ book[4] }}</p>
+            <p><strong>Availability:</strong> {{ book[9] }}</p>
+            <p><strong>Copies:</strong> {{ book[6] }}</p>
+          </div>
         </div>
-        <div class="book-info">
-          <h3>
-            <a href="{{ url_for('book_detail', isbn=book[10]) }}" class="book-card-link">
-              {{ book[1] }}
-            </a>
-          </h3>
-          <p><strong>Author:</strong> {{ book[2] }}</p>
-          <p><strong>Genre:</strong> {{ book[3] }}</p>
-          <p><strong>Subjects:</strong> {{ book[4] }}</p>
-          <p><strong>Availability:</strong> {{ book[9] }}</p>
-          <p><strong>Copies:</strong> {{ book[6] }}</p>
-        </div>
-      </div>
+      </a>
     {% endfor %}
   </div>
 {% else %}
@@ -77,4 +74,3 @@
 {% endif %}
 
 {% endblock %}
-

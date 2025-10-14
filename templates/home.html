@@ -38,9 +38,8 @@
 
 <nav class="custom-navbar">
     <a href="/" class="nav-button">Home</a>
-
-    <form method="GET" action="/" class="nav-form">
-        <select name="genre" class="nav-select">
+     <form method="GET" action="/" class="nav-form">
+        <select name="genre" class="nav-select" onchange="this.form.submit()">
             <option value="">Genre</option>
             {% for genre in genres %}
                 <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
@@ -48,7 +47,6 @@
                 </option>
             {% endfor %}
         </select>
-        <button type="submit" class="nav-button">Search</button>
     </form>
 
     <form method="GET" action="{{ url_for('search') }}" class="nav-form">

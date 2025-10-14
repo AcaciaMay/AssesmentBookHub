@@ -2,27 +2,26 @@
 {% block body %}
 
 
-    <nav class="custom-navbar">
-        <a href="/" class="nav-button">Home</a>
+  <nav class="custom-navbar">
+    <a href="/" class="nav-button">Home</a>
 
-        <form method="GET" action="/" class="nav-form">
-            <select name="genre" class="nav-select">
-                <option value="">Genre</option>
-                {% for genre in genres %}
-                    <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
-                        {{ genre['Genre'] }}
-                    </option>
-                {% endfor %}
-            </select>
-            <button type="submit" class="nav-button">Search</button>
-        </form>
+    <form method="GET" action="/" class="nav-form">
+        <select name="genre" class="nav-select" onchange="this.form.submit()">
+            <option value="">Genre</option>
+            {% for genre in genres %}
+                <option value="{{ genre['Genre'] }}" {% if genre['Genre'] == selected_genre %}selected{% endif %}>
+                    {{ genre['Genre'] }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
 
-        <form method="GET" action="{{ url_for('search') }}" class="nav-form">
-            <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
-        </form>
+    <form method="GET" action="{{ url_for('search') }}" class="nav-form">
+        <input type="text" name="q" class="nav-input" placeholder="Search for a book..." required>
+    </form>
 
-        <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
-    </nav>
+    <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+</nav>
 
     <script>
         let isDark = false;
