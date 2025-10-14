@@ -30,8 +30,6 @@ def inject_genres():
     genres = query_db("SELECT Genre FROM Genre ORDER BY Genre ASC;")
     return dict(genres=genres)
 
-
-
 @app.route("/")
 def home():
     genre = request.args.get("genre", "")
@@ -53,13 +51,24 @@ def home():
     """
 
     if genre:
+        # Filtered genre view
         sql = base_select + " WHERE Genre = ? ORDER BY Title ASC;"
         books = query_db(sql, (genre,))
+        return render_template(
+            "filtered_books.html",
+            books=books,
+            selected_genre=genre
+        )
     else:
+        # Normal homepage
         sql = base_select + " ORDER BY Title ASC;"
         books = query_db(sql)
+        return render_template(
+            "home.html",
+            books=books,
+            selected_genre=genre
+        )
 
-    return render_template("home.html", books=books, selected_genre=genre)
 
 
 @app.route("/search", methods=["GET"])
